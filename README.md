@@ -8,7 +8,7 @@ steps in. Install `kamikaze` inside your container and give your startup routine
 ## Installation
 
 ```sh
-$ curl https://git.bukatch.uk/tools/kamikaze/install.sh | sh
+$ curl https://github.com/olegbukatchuk/kamikaze/install.sh | sh
 ```
 
 **Note**: If not run as root, this will use `sudo` to set ownership of `kamikaze` to root
@@ -35,7 +35,7 @@ $ docker build -t kamikaze - <<EOF
   FROM alpine
   RUN set -exuo pipefail \
     && apk add curl \
-    && curl https://git.bukatch.uk/tools/kamikaze/install.sh | sh
+    && curl https://github.com/olegbukatchuk/kamikaze/install.sh | sh
 
   USER nobody
   CMD ["/kamikaze", "id", "-u"]
